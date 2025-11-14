@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Banca Amiga</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="top-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="img/logo.svg" alt="Banca Amiga" class="logo">
+        <span class="bank-name">Banca Amiga</span>
+      </div>
+
+      <nav class="main-nav">
+        <button class="nav-toggle" aria-label="menu">☰</button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li class="has-mega">
+            <a href="dashboard.html">Cuentas</a>
+            <div class="mega">
+              <a href="#">Resumen</a>
+              <a href="#">Movimientos</a>
+              <a href="#">Estados de cuenta</a>
+            </div>
+          </li>
+          <li><a href="transferencias.html">Transferencias</a></li>
+          <li><a href="historial.html">Historial</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <button class="icon-btn">🔔</button>
+        <div class="user-pill">
+          <img src="img/user.svg" alt="user" class="avatar">
+          <span>Cliente</span>
+        </div>
+        <a href="login.html" class="btn-primary small">Entrar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-grid">
+        <div>
+          <h1>Tu banca digital confiable</h1>
+          <p>Gestiona cuentas, transfiere y paga con seguridad. Diseño corporativo moderno y profesional.</p>
+          <div class="hero-cta">
+            <a href="login.html" class="btn-primary">Ingresar</a>
+            <a href="dashboard.html" class="btn-outline">Ver demo</a>
+          </div>
+        </div>
+        <div class="hero-panel card">
+          <h3>Saldo total</h3>
+          <p class="big-balance">$1,250.00</p>
+          <div class="mini-grid account-list">
+            <!-- cuentas -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article class="feature card">
+        <h3>Transferencias</h3>
+        <p>Rápidas y seguras entre cuentas.</p>
+      </article>
+      <article class="feature card">
+        <h3>Pagos</h3>
+        <p>Paga servicios y tarjetas en minutos.</p>
+      </article>
+      <article class="feature card">
+        <h3>Seguridad</h3>
+        <p>Autenticación en dos pasos y bloqueo de tarjetas.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Banca Amiga. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

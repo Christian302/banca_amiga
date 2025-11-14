@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard - Banca Amiga</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="img/logo.svg" alt="Banca Amiga" class="logo">
+        <span class="bank-name">Banca Amiga</span>
+      </div>
+
+      <nav class="main-nav">
+        <button class="nav-toggle" aria-label="menu">☰</button>
+        <ul>
+          <li><a href="dashboard.html">Inicio</a></li>
+          <li><a href="transferencias.html">Transferencias</a></li>
+          <li><a href="historial.html">Historial</a></li>
+          <li><a href="perfil.html">Mi Perfil</a></li>
+          <li><a href="#" class="logout">Salir</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <button class="icon-btn">🔔</button>
+        <div class="user-pill"><img src="img/user.svg" class="avatar"><span>Cliente</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container content">
+    <header class="topbar">
+      <div class="search"><input placeholder="Buscar movimientos..."></div>
+      <div class="user">Hola, <strong id="userName">Cliente</strong></div>
+    </header>
+
+    <main>
+      <h1>Bienvenido</h1>
+      <div class="grid">
+        <div class="card balance">
+            <h3>Saldo Actual</h3>
+            <p class="big-balance" id="saldo">$1,250.00</p>
+            <div class="account-list"></div>
+        </div>
+
+        <div class="card quick">
+            <h3>Transferencia rápida</h3>
+            <form id="quickTransfer">
+                <input id="toAccount" placeholder="Cuenta destino (ej: ACC-999)" required>
+                <input id="amount" placeholder="Monto" required type="number" step="0.01" min="0">
+                <button class="btn-primary" type="submit">Enviar</button>
+            </form>
+            <p id="transferMsg" class="msg"></p>
+        </div>
+      </div>
+
+      <section class="transactions" id="recentTx">
+        <h2>Movimientos recientes</h2>
+        <table>
+          <thead><tr><th>Fecha</th><th>Descripción</th><th>Monto</th></tr></thead>
+          <tbody id="txBody"></tbody>
+        </table>
+      </section>
+    </main>
+  </main>
+
+  <footer class="footer"><div class="container"><p>&copy; 2025 Banca Amiga.</p></div></footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
