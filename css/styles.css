@@ -146,3 +146,107 @@ table th, table td{padding:10px;border-bottom:1px solid #eee;text-align:left}
     padding-left: 14px;
   }
 }
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  background: #6482AD;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Submenús */
+.has-sub {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background: #7FA1C3;
+  top: 40px;
+  left: 0;
+  padding: 10px;
+  border-radius: 6px;
+  min-width: 200px;
+}
+
+.sub-menu li {
+  margin-bottom: 8px;
+}
+
+.sub-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.has-sub:hover .sub-menu {
+  display: block;
+}
+
+/* -------- Responsive -------- */
+
+.nav-toggle {
+  display: none;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+@media(max-width: 960px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #6482AD;
+    padding: 15px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    gap: 15px;
+  }
+
+  body.nav-open .nav-menu {
+    display: flex;
+  }
+
+  .sub-menu {
+    position: static;
+    background: #7FA1C3;
+    margin-top: 8px;
+  }
+
+  .has-sub:hover .sub-menu {
+    display: none;
+  }
+
+  .has-sub.active .sub-menu {
+    display: block;
+  }
+}
